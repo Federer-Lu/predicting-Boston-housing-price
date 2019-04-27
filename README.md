@@ -16,19 +16,35 @@ Udacity Machine Learning Project1
 
 ### 方法
 1. 导入数据，观察数据
-* pandas.read_csv()导入数据
+* 导入数据
+```
+pandas.read_csv()
+```
 
-* **df.head().append(df.tail())**, df.describe().T, df.info()，观察数据基本信息
+* 观察数据基本信息
+```
+df.head().append(df.tail()), df.describe().T, df.info()
+```
 2. 数据预处理
 * 预处理：观察并填充缺失值，删除异常值
 
 3. 探索性数据分析（EDA）：单变量分析（标签自身），多变量主观、客观分析（特征与标签之间）
 
-* 单变量分析：sns.distplot()
+* 单变量分析
+```
+sns.distplot()
+```
 
-* 多变量主观分析：**类别特征：sns.barplot()、sns.pointplot()，数值型特征：sns.jointplot()**
+* 多变量主观分析
+```
+类别特征：sns.barplot()、sns.pointplot()
+数值型特征：sns.jointplot()
+```
 
-* 多变量客观分析：sns.pairplot()、sns.heatmap()
+* 多变量客观分析
+```
+sns.pairplot()、sns.heatmap()
+```
   
 4. 特征分析，模型实现，作出预测
 * 划分训练集与测试集，定义衡量标准，绘制学习曲线
@@ -51,3 +67,6 @@ limit_value = len(data_df) * limit_percent
 ls=list(data_df.columns[(data_df.shape[0]-data_df.count())>limit_value])
 print(ls)
 ```
+3. **类别特征：sns.barplot()、sns.pointplot()，数值型特征：sns.jointplot()**,sns.pairplot()、sns.heatmap(),sns.distplot()
+
+4. **df.head().append(df.tail())**
